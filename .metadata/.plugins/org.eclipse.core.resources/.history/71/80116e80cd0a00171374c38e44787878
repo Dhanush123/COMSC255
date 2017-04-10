@@ -1,0 +1,35 @@
+//Assignment #: 10
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+
+public class StudentExt extends Student {
+
+	private String gradeType;
+	
+	public StudentExt(int id, String n, int[] ex, String s) {
+		super(id, n, ex);
+		gradeType = s;
+		System.out.println("gradeType " + gradeType);
+	}
+
+	@Override
+	public String findGrade() {
+		String s = super.findGrade();
+		if(gradeType.equals("Credit")) {
+			System.out.println("-->credit");
+			if(s.equals("A") || s.equals("B") || s.equals("C")) {
+				System.out.println("-->CR");
+				return "CR";
+			}
+			else {
+				System.out.println("-->NCR");
+				return "NCR";
+			}
+		}
+		else {
+			return s;
+		}
+	}
+
+}

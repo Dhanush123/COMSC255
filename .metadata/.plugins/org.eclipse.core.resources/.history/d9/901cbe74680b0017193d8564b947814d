@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+
+public class TestDay {
+
+	public static void main(String args[]){
+		  String in;
+		  in = JOptionPane.showInputDialog("Enter day");
+		  int day = Integer.parseInt(in);
+		  in = JOptionPane.showInputDialog("Enter month");
+		  int month = Integer.parseInt(in);
+		  Day d = new Day(day,month);
+		  JOptionPane.showMessageDialog(null, "Day Number for " + d.getDay()+"/"+d.getMonth() + " is " + d.findDayNum());
+		  System.exit(0);
+	}
+}

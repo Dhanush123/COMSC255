@@ -1,0 +1,32 @@
+
+import java.util.*;
+import sun.util.calendar.LocalGregorianCalendar.Date;
+
+public class Day {
+	
+	private int day;
+	protected int month;
+
+	public Day(int d, int m) {
+		day = d;
+		month = m;
+		System.out.println(month + "/" + day);
+	}
+	
+	public int getDay(){
+		return day;
+	}
+	
+	public int getMonth(){
+		return month;
+	}
+	
+	public int findDayNum(){
+		int days = 0;
+		
+		Calendar c = Calendar.getInstance();
+		c.set(2017, month, day, 0, 0); //2017 is non-leap
+		return c.get(Calendar.DAY_OF_YEAR);
+	}
+
+}

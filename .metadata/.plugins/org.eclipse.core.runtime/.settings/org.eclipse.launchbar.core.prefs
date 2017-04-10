@@ -1,0 +1,9 @@
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Average,org.eclipse.launchbar.core.descriptorType.default\:RectangleProc,org.eclipse.launchbar.core.descriptorType.default\:ShowMessage,org.eclipse.launchbar.core.descriptorType.default\:TestRectangle,org.eclipse.launchbar.core.descriptorType.default\:STS,org.eclipse.launchbar.core.descriptorType.default\:TestStatistics,org.eclipse.launchbar.core.descriptorType.default\:TestStatistics (1),org.eclipse.launchbar.core.descriptorType.default\:TestStudent,org.eclipse.launchbar.core.descriptorType.default\:TestSiblingExt,org.eclipse.launchbar.core.descriptorType.default\:TestStudent (1),org.eclipse.launchbar.core.descriptorType.default\:TestStudentExt (2),org.eclipse.launchbar.core.descriptorType.default\:TestStudentExt,org.eclipse.launchbar.core.descriptorType.default\:TestDay,org.eclipse.launchbar.core.descriptorType.default\:TestLeapDay,org.eclipse.launchbar.core.descriptorType.default\:TestStatus,org.eclipse.launchbar.core.descriptorType.default\:TestEmployee,org.eclipse.launchbar.core.descriptorType.default\:TestSibling
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Average/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Average/activeLaunchTarget=org.eclipse.remote.LocalServices\:Local
+org.eclipse.launchbar.core.descriptorType.default\:STS/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:TestEmployee/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:TestStatistics\ (1)/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:TestStatistics/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:TestStudent\ (1)/activeLaunchMode=run

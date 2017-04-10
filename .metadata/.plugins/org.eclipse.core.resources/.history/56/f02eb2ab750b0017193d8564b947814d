@@ -1,0 +1,52 @@
+
+import javax.swing.*;
+
+import java.text.DecimalFormat;
+import java.util.*;
+
+public class TestStatus {
+	
+	public static void main(String[] args) {
+		
+		Status[] status = new Status[6];
+		
+		double len, wid, len2, wid2;
+		String in, out1, out2;
+		DecimalFormat format = new DecimalFormat("0.#");
+		
+		in = JOptionPane.showInputDialog("Enter the 1st rectangle length:");
+		len = Double.parseDouble(in);
+		in = JOptionPane.showInputDialog("Enter the 1st rectangle width:");
+		wid = Double.parseDouble(in);
+        Rectangle r1 = new Rectangle(len, wid);
+        status[0] = r1;
+		
+		in = JOptionPane.showInputDialog("Enter the 2nd rectangle length:");
+		len2 = Double.parseDouble(in);
+		in = JOptionPane.showInputDialog("Enter the 2nd rectangle width:");
+		wid2 = Double.parseDouble(in);
+        Rectangle r2 = new Rectangle(len2, wid2);
+	    status[1] = r2;
+	    
+		in = JOptionPane.showInputDialog("Enter the 3nd rectangle length:");
+		len2 = Double.parseDouble(in);
+		in = JOptionPane.showInputDialog("Enter the 3nd rectangle width:");
+		wid2 = Double.parseDouble(in);
+        Rectangle r2 = new Rectangle(len2, wid2);
+	    status[1] = r2;
+		
+		for (int index=0; index < status.length; index++) {
+		     status[index].displayStatus();
+		}
+		
+		String out = "";
+
+		for (int index=0; index < status.length; index++) {
+			out = out + status[index].getStatus();
+		}
+
+		JOptionPane.showMessageDialog(null, out);
+		System.exit(0);
+	}
+	
+}

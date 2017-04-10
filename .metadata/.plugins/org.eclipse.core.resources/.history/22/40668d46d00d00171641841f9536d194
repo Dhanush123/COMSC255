@@ -1,0 +1,10 @@
+//Assignment #: 14
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+
+public abstract class Employee {
+	String name;
+	String salary;
+	
+}

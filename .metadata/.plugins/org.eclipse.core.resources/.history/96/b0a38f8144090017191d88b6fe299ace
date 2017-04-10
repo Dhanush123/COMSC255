@@ -1,0 +1,39 @@
+//Assignment #: 8
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+
+public class Student {
+ private int id;
+ private String name;
+ private int[] exams;
+
+ public Student(int id, String n, int[] ex) {
+  //Below id refers to local variable.
+  //this.id refers to the instance variable. 
+  this.id = id;
+  name = n;
+
+  //create exams array of same length as ex array
+  exams = new int[ex.length];
+
+  //copy contents from array ex to exams
+  System.arraycopy(ex, 0, exams, 0, ex.length);
+ }
+
+ public String findGrade() {
+  String grade;
+  //enter code here for finding the final grade.
+
+  return grade;
+ }
+
+ public int getId() {
+  return id;
+ }
+
+ public String getName() {
+  return name;
+ }
+
+}

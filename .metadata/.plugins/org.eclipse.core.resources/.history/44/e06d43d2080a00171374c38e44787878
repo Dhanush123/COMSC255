@@ -1,0 +1,9 @@
+
+public class SiblingExt extends Sibling {
+
+	public SiblingExt(String n, int a, int w) {
+		super(n, a, w);
+		// TODO Auto-generated constructor stub
+	}
+
+}

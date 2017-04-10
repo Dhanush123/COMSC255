@@ -1,0 +1,114 @@
+import java.util.Arrays;
+
+import javax.swing.JOptionPane;
+
+//Assignment #: 13
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+
+public class TestEmployee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name;
+		double salary, pctBonus, bonus, travelExpense;
+		int optionsCount;
+		
+		String in;
+		in = JOptionPane.showInputDialog("Enter Number of Workers:");
+		int nWorkers = Integer.parseInt(in);
+		in = JOptionPane.showInputDialog("Enter Number of Managers:");
+		int nManagers = Integer.parseInt(in);
+		in = JOptionPane.showInputDialog("Enter Number of Executives:");
+		int nExecutives = Integer.parseInt(in);
+		
+		int sizee = nWorkers + nManagers + nExecutives - 1;
+		Employee[] employee = new Employee[sizee];
+		int start = nWorkers;
+		
+		for(int i = 0; i < start; i++){
+		   in = JOptionPane.showInputDialog("Enter a worker data:");
+		   String[] temp = in.trim().split("\\s*,\\s*");
+		   employee[i] = new Worker(temp[0],Double.parseDouble(temp[1]),Double.parseDouble(temp[2]));
+		   start++;
+		}
+		
+		for(int i = start + 1; i < sizee; i++){
+		   in = JOptionPane.showInputDialog("Enter a manager data:");
+		   String[] temp = in.split("\\s*,\\s*");
+		   employee[i] = new Manager(temp[0],Double.parseDouble(temp[1]),Double.parseDouble(temp[2]),Integer.parseInt(temp[3]));
+		   start++;
+		}
+		
+		for(int i = start + 1; i < sizee; i++){
+		   in = JOptionPane.showInputDialog("Enter an executive data:");
+		   String[] temp = in.split("\\s*,\\s*");
+		   employee[i] = new Executive(temp[0],Double.parseDouble(temp[1]),Double.parseDouble(temp[2]),Integer.parseInt(temp[3]), Integer.parseInt(temp[4]));
+		   start++;
+	    }
+			
+		
+		
+		System.out.println("sizee " + sizee);
+		String out = "";
+		String outW = "";
+		String outM = "";
+		String outE = "";
+		
+		for (int i=0; i < employee.length; i++)
+		{
+			//get name and salary
+			//To access target object methods that are defined in class Employee, we don’t need type casting.
+			name = employee[i].getName();
+			salary = employee[i].getSalary();
+			 
+			//call computeBonus using polymorphic call
+			//Since computeBonus is declared in Employee class, we don’t need type casting.
+			bonus = employee[i].computeBonus();
+			 
+			//use name, salary, bonus, pctBonus returned above towards building the summary report
+			
+			//To access target object methods that are not defined in class Employee, we use down casting.
+			//Downcasting (Widening) should be done within an if statement using instanceof
+			//Since getPctBonus method is not present in class Employee, it is accessed via down casting.
+			//Similarly getTravelExpense, and getOptionsCount are accessed via downcasting.
+			//The instanceof clause is used below to ensure a safe down casting (widening).
+			if (employee[i] instanceof Worker){
+				pctBonus = ((Worker) employee[i]).getPctBonus();
+				//accumulate Worker output in outW
+				outW = outW + "Name:" + name + "\n";
+				outW += outW + "Yearly Salary: $ " + salary + "\n";
+				outW += outW + "PercentBonus: " + pctBonus + "\n";
+				outW += outW + "Total Bonus: " + bonus + "\n";
+			}
+			else if (employee[i] instanceof Manager) {
+				pctBonus = ((Manager) employee[i]).getPctBonus();
+				travelExpense = ((Manager) employee[i]).getTravelExpense();
+				//accumulate Manager output in outM
+				outM = outM + "Name:" + name + "\n";
+				outM += outM + "Yearly Salary: $ " + salary + "\n";
+				outM += outM + "PercentBonus: " + pctBonus + "\n";
+				outM += outM + "Total Bonus: " + bonus + "\n";
+				outM += outM + "Travel Expense: " + travelExpense + "\n";
+			}
+			else if (employee[i] instanceof Executive) {
+				pctBonus = ((Executive) employee[i]).getPctBonus();
+				travelExpense = ((Executive) employee[i]).getTravelExpense();
+				optionsCount = ((Executive) employee[i]).getOptionsCount();
+				//accumulate Executive output in outE
+				outE = outE + "Name:" + name + "\n";
+				outE += outE + "Yearly Salary: $ " + salary + "\n";
+				outE += outE + "PercentBonus: " + pctBonus + "\n";
+				outE += outE + "Total Bonus: " + bonus + "\n";
+				outE += outE + "Travel Expense: " + travelExpense + "\n";
+				outE += outE + "Options Count: " + optionsCount + "\n";
+			}
+		}
+		//After getting out of the loop
+		out = outW + outM + outE;
+		//display out
+		JOptionPane.showMessageDialog(null, out);
+		System.exit(0);
+	}
+}
