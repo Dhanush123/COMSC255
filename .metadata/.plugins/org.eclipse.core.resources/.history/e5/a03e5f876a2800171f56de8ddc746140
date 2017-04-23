@@ -1,0 +1,36 @@
+//Assignment #: 16
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+ 
+import java.awt.*;
+import javax.swing.*;
+
+public class DrawArea extends JFrame 
+{
+	
+   public DrawArea()
+   {
+      super();
+   }
+
+   public void paintComponent(Graphics g)
+   {
+   }
+   
+   public void setPictureType(String picture)
+   {
+	   if(picture.equals("Happy"))
+	   {
+		   
+	   }
+	   if(picture.equals("Sad"))
+	   {
+		   
+	   }
+	   else
+	   {
+		   
+	   }
+   }
+}

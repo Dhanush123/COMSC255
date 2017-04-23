@@ -1,0 +1,21 @@
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class TestHappyFace {
+	
+	public TestHappyFace(){
+		JPanel btns = new JPanel();
+		JPanel jpOp = new JPanel();
+		btns.add(jpOp);
+		jpOp.setBackground(Color.GREEN);
+		JButton jbtHappy = new JButton("Happy");
+		JButton jbtSad = new JButton("Sad");
+		JButton jbtPic = new JButton("Picture");
+		btns.setSize(300, 100);
+		btns.setVisible(true);
+	}
+	
+
+}

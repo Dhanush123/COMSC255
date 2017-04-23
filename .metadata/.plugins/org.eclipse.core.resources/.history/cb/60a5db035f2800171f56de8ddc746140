@@ -1,0 +1,21 @@
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class BottomPanel {
+	private JPanel btns = new JPanel();
+	private JPanel jpOp = new JPanel();
+	private JButton jbtAdd = new JButton("Add");
+	private JButton jbtSub = new JButton("Sub");
+	private JButton jbtMult = new JButton("Mult");
+	
+	public BottomPanel() {
+		btns.add(jpOp);
+		jpOp.setBackground(Color.GREEN);
+		jpOp.add(jbtAdd);
+		jpOp.add(jbtSub);
+		JpOp.add(jbtMult);
+	}
+
+}

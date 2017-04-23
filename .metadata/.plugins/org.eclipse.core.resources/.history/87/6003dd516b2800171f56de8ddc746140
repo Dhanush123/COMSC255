@@ -1,0 +1,43 @@
+//Assignment #: 16
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+ 
+import java.awt.*;
+import javax.swing.*;
+
+public class DrawArea extends JFrame 
+{
+	
+   public DrawArea()
+   {
+      super();
+   }
+
+   public void paintComponent(Graphics g)
+   {
+       super.paintComponents(g);
+   }
+   
+   public void setPictureType(String picture)
+   {
+	   if(picture.equals("Happy"))
+	   {
+//	       g.setColor(Color.yellow);
+//	       g.fillOval(0,0,300,300);
+//	       g.setColor(Color.RED);
+//	       g.fillOval(80,75,30,30);
+//	       g.fillOval(190,75,30,30);
+//	       g.setColor(Color.black);
+//	       g.fillArc (75,100,150,150,0,-180
+	   }
+	   if(picture.equals("Sad"))
+	   {
+		   
+	   }
+	   else
+	   {
+		   
+	   }
+   }
+}

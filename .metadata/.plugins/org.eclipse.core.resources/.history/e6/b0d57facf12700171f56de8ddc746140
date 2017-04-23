@@ -1,0 +1,51 @@
+/**
+ * This file contains the code that creates a simple pie Chart.
+ */
+ 
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class PieChart extends JFrame {
+
+   private int one, two, three, four, five;		
+   public PieChart(int one, int two, int three, int four, int five)
+   {
+      super();
+      this.one = one;
+      this.two = two;
+      this.three = three;
+      this.four = four;
+      this.five =  five;
+   }
+
+   public void paint( Graphics g )
+   {
+      int total = one + two + three + four + five;
+      int end1 = (int) (((((double) one)/total) * 100) * 360);
+      int end2 = end1 + (int) (((((double) two)/total) * 100) * 360);
+      int end3 = end2 + (int) (((((double) three)/total) * 100) * 360);
+      int end4 = end3 + (int) (((((double) four)/total) * 100) * 360);
+
+      g.setColor(Color.red);
+      g.fillArc( 100, 100, 200, 200, 0, end1);
+      g.drawString("North - "+((((double) one)/total) * 100)+"%", 420, 100);
+
+      g.setColor(Color.green);
+      g.fillArc(100, 100, 200, 200, end1, end2);
+      g.drawString("South - "+((((double) two)/total) * 100)+"%", 420, 100);
+
+      g.setColor(Color.blue);
+      g.fillArc(100, 100, 200, 200, end2, end3);
+      g.drawString("East - "+((((double) three)/total) * 100)+"%", 420, 120);
+
+      g.setColor(Color.magenta);
+      g.fillArc(100, 100, 200, 200, end3, end4);
+      g.drawString("West - "+((((double) four)/total) * 100)+"%", 420, 140);
+
+      g.setColor(Color.yellow);
+      g.fillArc(100, 100, 200, 200, end4, 360);
+      g.drawString("Midwest - "+((((double) five)/total) * 100)+"%", 420, 160);
+
+   }
+}

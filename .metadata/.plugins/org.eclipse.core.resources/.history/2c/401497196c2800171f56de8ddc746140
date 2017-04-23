@@ -1,0 +1,44 @@
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class TestHappyFace {
+	
+//	public TestHappyFace(){
+//		JFrame frame = new JFrame("FrameDemo");
+//		
+//		JPanel btns = new JPanel();
+//		JPanel jpOp = new JPanel();
+//		btns.add(jpOp);
+//		jpOp.setBackground(Color.GREEN);
+//		JButton jbtHappy = new JButton("Happy");
+//		JButton jbtSad = new JButton("Sad");
+//		JButton jbtPic = new JButton("Picture");
+//		btns.setSize(300, 100);
+//		btns.setVisible(true);
+//	}
+	
+	public static void main(String args[]){
+		JFrame frame = new JFrame("");
+		frame.setSize(500, 500);
+		frame.setVisible(true);
+	    GridLayout gl = new GridLayout (2,1);
+		JPanel jpMain = new JPanel();
+		jpMain.setLayout(gl);
+		JPanel jpBtns = new JPanel();
+		jpMain.add(jpBtns);
+		jpBtns.setBackground(Color.GREEN);
+	    frame.setContentPane(jpMain);
+		JButton jbtHappy = new JButton("Happy");
+		JButton jbtSad = new JButton("Sad");
+		JButton jbtPic = new JButton("Picture");
+		jpBtns.add(jbtHappy);
+		jpBtns.add(jbtSad);
+		jpBtns.add(jbtPic);
+//	    jpBtns.setSize(300,100);
+//	    frame.add(jpBtns);
+	}
+}

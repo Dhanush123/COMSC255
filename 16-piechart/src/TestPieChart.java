@@ -1,0 +1,25 @@
+//Assignment #: 16
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JOptionPane;
+
+public class TestPieChart {
+	
+   public static void main( String args[] )
+   {
+      int one = Integer.parseInt(JOptionPane.showInputDialog("Enter sales for North region (in milions of dollars):"));
+      int two = Integer.parseInt(JOptionPane.showInputDialog("Enter sales for South region (in milions of dollars):"));
+      int three = Integer.parseInt(JOptionPane.showInputDialog("Enter sales for East region (in milions of dollars):"));
+      int four = Integer.parseInt(JOptionPane.showInputDialog("Enter sales for West region (in milions of dollars):"));
+      int five = Integer.parseInt(JOptionPane.showInputDialog("Enter sales for Midwest region (in milions of dollars):"));
+      PieChart app = new PieChart(one,two,three,four,five);
+      app.setSize(500, 500);
+      app.setLocation(50, 50);
+      app.show();
+   }
+}

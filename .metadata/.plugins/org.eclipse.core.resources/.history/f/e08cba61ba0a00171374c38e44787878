@@ -1,9 +1,0 @@
-
-public class StudentExt extends Student {
-
-	public StudentExt(int id, String n, int[] ex) {
-		super(id, n, ex);
-		// TODO Auto-generated constructor stub
-	}
-
-}

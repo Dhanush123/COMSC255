@@ -1,0 +1,12 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class JFrameExt {
+
+	
+	public JFrameExt() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
