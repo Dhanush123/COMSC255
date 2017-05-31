@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="265" key="DIALOG_WIDTH"/>
-		<item value="274" key="DIALOG_Y_ORIGIN"/>
-		<item value="399" key="DIALOG_HEIGHT"/>
-		<item value="-216" key="DIALOG_X_ORIGIN"/>
+		<item value="1440" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="-533" key="DIALOG_X_ORIGIN"/>
+		<item value="873" key="DIALOG_HEIGHT"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Sibling" key="selection"/>
+		<item value="JFrame" key="selection"/>
 		<list key="findhistory">
-			<item value="SiblingExt"/>
-			<item value="system.out"/>
-			<item value="4]"/>
-			<item value="3]"/>
-			<item value="2]"/>
-			<item value="1]"/>
-			<item value="0]"/>
-			<item value="I]"/>
+			<item value="jframe"/>
+			<item value="jtamessage"/>
+			<item value="correct gue"/>
+			<item value="guessinvalid"/>
+			<item value="private"/>
+			<item value="300"/>
+			<item value="80"/>
+			<item value="110"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="200"/>
+			<item value="100"/>
 			<item value="Sibling"/>
 			<item value="4].trim()"/>
 			<item value="3].trim()"/>
 			<item value="2].trim()"/>
 			<item value="1].trim()"/>
-			<item value="0].trim()"/>
-			<item value="i]"/>
-			<item value="))"/>
 		</list>
 	</section>
 </section>

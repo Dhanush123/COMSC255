@@ -1,0 +1,7 @@
+
+public class GuessTooSmallException extends Exception {
+
+	public GuessTooSmallException() {
+		super("Guess Is Too Small");
+	}
+}

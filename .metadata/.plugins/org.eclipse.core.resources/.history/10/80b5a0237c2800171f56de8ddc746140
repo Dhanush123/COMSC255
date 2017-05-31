@@ -1,0 +1,22 @@
+import javax.swing.JOptionPane;
+
+//Assignment #: 18
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+ 
+public class StudentEx{
+
+	public static void main(String[] args){
+		int numStudent = 0;
+		while(true){
+			try {
+			    numStudent = Integer.parseInt(JOptionPane.showInputDialog("Enter student count"));
+			}
+			catch (NumberFormatException nfe) {
+			    throw new NumberFormatException("Input not a whole number");
+			}
+		}
+		
+	}
+}

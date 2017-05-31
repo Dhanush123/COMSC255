@@ -1,0 +1,7 @@
+
+public class GuessNotWholeNumberException extends Exception {
+
+	public GuessNotWholeNumberException() {
+		super("Guess Is Not A Whole Number");
+	}
+}

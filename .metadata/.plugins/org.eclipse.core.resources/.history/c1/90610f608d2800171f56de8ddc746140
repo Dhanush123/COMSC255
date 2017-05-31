@@ -1,0 +1,23 @@
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class TestJFrameExt {
+
+	public static void main(String[] args) {
+		
+		JFrame frame = new JFrame("Guessing Game");
+		frame.setSize(500, 500);
+		frame.setVisible(true);
+	    GridLayout gl = new GridLayout (2,1);
+		JPanel jpMain = new JPanel();
+		jpMain.setLayout(gl);
+		JFrameExt jfe = new JFrameExt();
+		jfe.setSize(400,400);
+		jfe.setVisible(true);
+		jpMain.add(jfe);
+	    frame.setContentPane(jpMain);
+	}
+
+}

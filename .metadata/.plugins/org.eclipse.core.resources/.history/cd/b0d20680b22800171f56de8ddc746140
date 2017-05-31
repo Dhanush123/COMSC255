@@ -1,0 +1,7 @@
+
+public class GuessInvalidException extends Exception {
+
+	public GuessInvalidException() {
+		super("Invalid Guess");
+	}
+}

@@ -1,0 +1,15 @@
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class TestJFrameExt {
+
+	public static void main(String[] args) {
+		
+		JFrameExt jfe = new JFrameExt();
+		jfe.setSize(500,500);
+		jfe.setVisible(true);
+	}
+
+}

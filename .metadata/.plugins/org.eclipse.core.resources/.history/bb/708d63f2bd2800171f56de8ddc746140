@@ -1,0 +1,140 @@
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+ 
+public class JFrameExt extends JFrame implements ActionListener
+{
+	private static int numGuesses = 0;
+	private static int numGames = 0;
+	private static int iGuesses = 0;
+          //Create a label
+          private JLabel jlbMessage = new JLabel("Enter Guess");
+ 
+            //Create a text field of width 15
+            private JTextField jtfMessage = new JTextField (15);
+ 
+            //Create a text area of 10 rows and 20 columns
+            private JTextArea jtaMessage = new JTextArea (10, 20);
+ 
+            //Create a scroll bar containing the text area with vertical and horizontal scroll bars.
+            private JScrollPane jscrMessage = new JScrollPane (jtaMessage,
+                  JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+                  JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+            
+	//Create two JPanel objects
+	JPanel jpNorth = new JPanel();
+	JPanel jpCenter = new JPanel();
+	 
+	//Create a Guess reference.
+	private Guess g;
+ 
+		//Write a constructor containing the GUI
+		public JFrameExt ()
+		{
+			//       Create GUI
+			JFrame frame = new JFrame("Guessing Game");
+			frame.setSize(500, 500);
+			frame.setVisible(true);
+		    GridLayout gl = new GridLayout (2,1);
+			JPanel jpMain = new JPanel();
+			jpMain.setLayout(gl);
+			jpMain.add(jpNorth);
+			jpMain.add(jpCenter);
+		    frame.setContentPane(jpMain);
+		 
+		  //Add label and text field to north panel
+		          jpNorth.add  (jlbMessage);
+		          jpNorth.add (jtfMessage);
+		 
+		          //Add scroll pane to center panel.
+		  //(text area was added to scroll pane during scroll pane creation).
+		  jpCenter.add (jscrMessage);
+ 
+ 
+           
+            //Register with text field to receive enter key press event
+            jtfMessage.addActionListener(this);
+            jtaMessage.setCaretPosition(jtaMessage.getDocument().getLength());
+ 
+            //Create Guess object for starting the game first time
+            g = new Guess ();
+            numGames++;
+            jtaMessage.append("New Game Started. Enter your guess" + "\n");
+		}
+
+//Here is a sample actionPerformed method. 
+//It handles an Enter Key Press event in the text field
+//It catches exceptions from call to checkGuess method.
+ public void actionPerformed (ActionEvent e)
+{ 
+        String message = "";
+        String userGuess = "";
+        if (e.getSource() == jtfMessage)
+        {
+            //increment guess count
+             
+        	try
+           {
+                    //Get the user guess from the text field
+                    userGuess = jtfMessage.getText().trim();
+ 
+                    //Call checkGuess and  pass it userGuess.
+                    g.checkGuess(userGuess);
+ 
+                    //If it got here, user guess is correct.
+                    message = userGuess + " - Correct Guess";
+ 
+                    //Increment gameCount
+ 
+ 
+                    //Accumulate  Summary Report in variable message.
+                    //(But don’t display content of message here).
+                //(They will be displayed later in clause finally below)
+ 
+                    //Start a new Game
+                    g = new Guess ();
+            }
+            catch (GuessTooSmallException ex)
+           {
+            	
+				//Extract message from exception object
+				message = userGuess + " - " + ex.getMessage();
+ 
+            }
+            catch (GuessTooLargeException ex)
+           {
+                //Extract message from exception object
+            	message = userGuess + " - " + ex.getMessage();
+            }
+            catch (GuessOutOfBoundsException ex)
+        	{
+                //Extract message from exception object
+            	message = userGuess + " - " + ex.getMessage();
+            }
+            //the code in finally will always execute
+            //just before leaving the try/catch block.
+        	catch (GuessNotWholeNumberException ex) {
+                //Extract message from exception object
+            	message = userGuess + " - " + ex.getMessage();
+			}
+            finally
+            {
+                	jtaMessage.append (message + "\n");
+                    //display message in text area.
+            		if(message.contains("Correct Guess")){
+	                    numGuesses++;
+                        jtaMessage.append("Guess Average: " + numGuesses/numGames + " Games: " + numGames + " Guesses: " + numGuesses + "\n");
+                        jtaMessage.append("New Game Started. Enter your guess" + "\n");
+                        numGames++;
+            		}
+            		else{
+	                    numGuesses++;
+            		}
+             }
+            }
+        else{
+        	
+        }
+	}
+}

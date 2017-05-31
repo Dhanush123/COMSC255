@@ -1,0 +1,6 @@
+
+public class NotAlphabeticException extends Exception {
+	public NotAlphabeticException() {
+		super ("Name not alphabetic");
+	}
+}

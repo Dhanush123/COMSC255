@@ -1,0 +1,25 @@
+//Assignment #: 18
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+ 
+public class StudentEx{
+
+	public static void main(String[] args){
+		int numStudents = 0;
+		while(true){
+			try {
+			        idInt=Integer.parseInt (id);
+			}
+			catch (NumberFormatException ex) {
+			        throw new IdNotAWholeNumberException ( ) ;
+			}
+			if (idInt < 1 || idInt > 999) {
+			        throw new IdOutOfRangeException ( ) ;
+			}
+			else {
+			        return;
+			}
+		}
+	}
+}

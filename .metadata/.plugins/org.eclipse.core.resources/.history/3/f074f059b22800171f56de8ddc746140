@@ -1,0 +1,7 @@
+
+public class GuessOutOfBoundsException extends Exception {
+
+	public GuessOutOfBoundsException() {
+		super("Guess Is Out Of Bounds");
+	}
+}

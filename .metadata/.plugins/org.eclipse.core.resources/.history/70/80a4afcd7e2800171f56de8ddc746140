@@ -1,0 +1,6 @@
+
+public class NotSpecifiedException extends Exception {
+	  public NotSpecifiedException() {
+		    super("Name not specified (left empty)");
+	  }
+}

@@ -1,0 +1,11 @@
+//Assignment #: 19
+//Student Name: Dhanush Patel
+//Class:  COMSC-255
+//Section: 8306
+
+public class GuessNotWholeNumberException extends Exception {
+
+	public GuessNotWholeNumberException() {
+		super("Guess Not a Whole Number");
+	}
+}
